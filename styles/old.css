@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 3000px;
+	background-color: #f3f5f7;
+}
+
+.w {
+	width: 1200px;
+	margin: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	height: 42px;
+	margin: 30px auto;
+}
+
+.logo {
+	float: left;
+	width: 198px;
+	height: 42px;
+}
+
+li {
+	list-style: none;
+}
+
+.nav {
+	float: left;
+	margin-left: 60px;
+}
+
+.nav ul li {
+	float: left;
+	margin: 0 15px;
+}
+
+.nav ul li a {
+	display: block;
+	height: 42px;
+	padding: 0 10px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #050505;
+	font-family: 'Camphor Pro VF', 'Camphor Pro', sans-serif;
+}
+
+.nav ul li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+	float: left;
+	height: 42px;
+	width: 412px;
+	margin-left: 50px;
+}
+
+.search input {
+	float: left;
+	width: 360px;
+	height: 40px;
+	border: 1px solid black;
+	border-right: 0;
+	color: #bfbfbf;
+	font-size: 14px;
+	text-indent: 1em;
+}
+
+.search button {
+	float: left;
+	width: 50px;
+	height: 42px;
+	border: 0;
+	background-color: grey;
+}
+
+.user ul li a {
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #050505;
+	text-indent: 2em;
+	font-family: 'Camphor Pro VF', 'Camphor Pro', sans-serif;
+}
+
+.banner {
+	height: 421px;
+	background-color: #1c036c;
+}
+
+.banner {
+	height: 421px;
+	background-color: #1c036c;
+}
+
+.banner {
+	display: block;
+	height: 421px;
+	background: url(xiaomi.png) no-repeat;
+	background-size: 100%;
+}
+
+.subnav {
+	height: 421px;
+	width: 190px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.box {
+	margin: 10px;
+}
+
+.one {
+	font-size: 22px;
+	font-family: 'Camphor Pro VF', 'Camphor Pro', sans-serif;
+	font-weight: 400;
+	line-height: 58px;
+	margin-top: 10px;
+}
+
+.box {
+	height: 615px;
+	width: 1226px;
+	margin: 0 auto;
+}
+
+.box-left {
+	width: 234px;
+	height: 615px;
+	float: left;
+	background-image: url(xioami2.png);
+}
+
+.box-right ul li {
+	width: 234px;
+	height: 300px;
+	float: left;
+	margin-left: 14px;
+	margin-bottom: 14px;
+	background-color: #fff;
+}
+
+.box-right ul li img {
+	display: block;
+	margin-left: 40px;
+	padding: 20px 0;
+}
+
+.box-right ul li h3 {
+	font-size: 14px;
+	margin: 0px 10px 2px;
+	font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+	text-align: center;
+	font-weight: 400;
+}
+
+.description span {
+	display: block;
+	margin-top: 10px;
+	height: 18px;
+	font-size: 12px;
+	font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+	color: #b0b0b0;
+	text-align: center;
+}
+
+.price span {
+	font-size: 14px;
+	height: 18px;
+	margin-top: 14px;
+	color: orange;
+}
