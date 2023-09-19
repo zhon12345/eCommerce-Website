@@ -2,11 +2,7 @@
 
 * {
 	font-family: 'Montserrat', sans-serif;
-}
-
-body,
-html {
-	max-width: 100vw;
+	color: var(--black);
 }
 
 :root {
@@ -31,5 +27,7 @@ html {
 
 /* General Section Css */
 .container {
-	text-align: center;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 19px;
 }
