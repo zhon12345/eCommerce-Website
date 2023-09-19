@@ -31,3 +31,17 @@
 	max-width: 1200px;
 	padding: 0 19px;
 }
+
+button {
+	padding: 10px 10px;
+	background: transparent;
+	border: 2px solid var(--black);
+	transition: all 0.3s ease-in;
+	color: var(--black);
+	font-weight: 500;
+}
+
+button:hover {
+	background-color: var(--black);
+	color: white;
+}
