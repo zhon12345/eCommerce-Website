@@ -2,7 +2,7 @@
 	padding: 6rem 0;
 }
 
-.header {
+.product-header {
 	font-size: 2rem;
 	text-align: left;
 	margin-bottom: 2rem;
@@ -29,20 +29,10 @@
 	padding: 1rem;
 }
 
-button {
-	margin-top: 1rem;
+.product-details button {
 	padding: 5px 10px;
-	background: transparent;
-	border: 2px solid var(--black);
-	transition: all 0.3s ease-in;
-	color: var(--black);
-	font-weight: 500;
+	margin-top: 1rem;
 	font-size: 15px;
-}
-
-button:hover {
-	background-color: var(--black);
-	color: white;
 }
 
 .more {
