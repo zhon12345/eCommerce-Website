@@ -1,0 +1,81 @@
+.footer-section {
+	padding: 1rem 0;
+	background-color: #222;
+}
+
+.footer-main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.socials,
+.footer-icons,
+.newsletter,
+.form {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.footer-main h3 {
+	color: #fff;
+}
+
+.fa-brands {
+	font-size: 28px;
+}
+
+.footer-input {
+	border: 2px solid #898989;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.footer-input:focus-within {
+	outline: 1px solid #fff;
+}
+
+.footer-input input {
+	color: #fff;
+	border: none;
+	background-color: transparent;
+}
+
+.footer-input input:focus {
+	outline: none;
+}
+
+.footer-input button {
+	padding: 0;
+	border: none;
+	color: #898989;
+}
+
+.fa-brands:hover,
+.footer-input button:hover {
+	transition: all 0.3s ease-in;
+	background-color: transparent;
+	color: #fff;
+}
+
+hr {
+	margin: 1rem 0;
+}
+
+.footer-footer,
+.country {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fa-brands,
+.footer-footer p,
+.fa-globe {
+	color: #898989;
+}
+
+.fa-globe {
+	padding-left: 5px;
+	font-size: 20px;
+}
