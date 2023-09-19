@@ -1,0 +1,40 @@
+.products-section {
+	padding: 6rem 0;
+}
+
+.products-section .container {
+	max-width: 1200px;
+}
+
+h1.header {
+	font-size: 2rem;
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
+.products {
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	outline: 1px solid rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.products:hover {
+	transition: all 0.15s ease-in;
+	outline: 1px solid var(--black);
+}
+
+.img img {
+	width: 100%;
+}
+
+.see-more {
+	justify-content: center;
+}

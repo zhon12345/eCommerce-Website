@@ -6,9 +6,10 @@
 		<title>Phonix - Official RuiXi Reseller</title>
 
 		<!-- CSS Files -->
-		<link rel="stylesheet" href="./styles/reset.css" />
-		<link rel="stylesheet" href="./styles/style.css" />
-		<link rel="stylesheet" href="./styles/nav.css" />
+		<link rel="stylesheet" href="/styles/reset.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/nav.css" />
+		<link rel="stylesheet" href="/styles/products.css" />
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,23 +25,70 @@
 				</div>
 
 				<!-- Nav Links -->
-				<div class="nav__toggle" id="mobile-menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</div>
 				<ul class="nav__links">
-					<li><a href="#products" id="products-page">Products</a></li>
-					<li><a href="#about" id="about-page">About</a></li>
-					<li><a href="#contact" id="contact-page">Contact</a></li>
+					<li><a href="#home" class="active">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 
 				<!-- Nav Icons -->
 				<ul class="nav__icons">
 					<li><a href="#products" class="fa-solid fa-magnifying-glass"></a></li>
+					<li><a href="#cart" class="fa-solid fa-cart-shopping"></a></li>
 					<li><a href="#about" class="fa-solid fa-circle-user"></a></li>
 				</ul>
 			</div>
 		</nav>
+
+		<!-- Products Section -->
+		<section id="Products" class="products-section">
+			<div class="container">
+				<!-- Section Header -->
+				<h1 class="header">Products</h1>
+
+				<div class="grid-container">
+					<div class="products">
+						<a href="">
+							<div class="img">
+								<img src="/assets/phone1.png" alt="phone1" />
+							</div>
+							<div class="details">
+								<h1>RuiXi 13 Ultra</h1>
+							</div>
+						</a>
+					</div>
+
+					<div class="products">
+						<a href="">
+							<div class="img">
+								<img src="/assets/phone2.png" alt="phone1" />
+							</div>
+							<div class="details">
+								<h1>RuiXi 12 5G</h1>
+							</div>
+						</a>
+					</div>
+
+					<div class="products">
+						<a href="">
+							<div class="img">
+								<img src="/assets/phone3.png" alt="phone1" />
+							</div>
+							<div class="details">
+								<h1>RuiXi Note 12S</h1>
+							</div>
+						</a>
+					</div>
+
+					<div class="products see-more">
+						<a href="">
+							<h1>See More</h1>
+							<i class="fa-solid fa-circle-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
