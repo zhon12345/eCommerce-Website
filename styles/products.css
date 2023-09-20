@@ -2,9 +2,8 @@
 	padding: 6rem 0;
 }
 
-.product-header {
+.products-header {
 	font-size: 2rem;
-	text-align: left;
 	margin-bottom: 2rem;
 }
 
@@ -17,10 +16,6 @@
 .products:hover {
 	transition: all 0.15s ease-in;
 	box-shadow: var(--box-shadow);
-}
-
-.product-header img {
-	width: 100%;
 }
 
 .product-details {
