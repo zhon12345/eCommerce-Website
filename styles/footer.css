@@ -3,81 +3,42 @@
 	background-color: #222;
 }
 
-.footer-main {
+.newsletter {
 	display: flex;
 	justify-content: space-between;
-}
-
-.socials,
-.footer-icons,
-.newsletter,
-.form {
-	display: flex;
-	gap: 1rem;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
-.footer-main h3 {
-	font-size: 20px;
+.newstext h4 {
+	font-size: 22px;
+	font-weight: 700;
 	color: #fff;
 }
 
-.fa-brands {
-	font-size: 28px;
-}
-
-.footer-input {
-	border: 2px solid #898989;
-	padding: 5px;
-	border-radius: 10px;
-}
-
-.footer-input:focus-within {
-	outline: 1px solid #fff;
-}
-
-.footer-input input {
-	color: #fff;
-	border: none;
-	background-color: transparent;
-}
-
-.footer-input input:focus {
-	outline: none;
-}
-
-.footer-input button {
-	padding: 0;
-	padding-right: 5px;
-	border: none;
+.newstext p {
+	font-size: 14px;
+	font-weight: 500;
 	color: #898989;
 }
 
-.fa-brands:hover,
-.footer-input button:hover {
-	transition: all 0.3s ease-in;
-	background-color: transparent;
-	color: #fff;
-}
-
-hr {
-	margin: 1rem 0;
-}
-
-.footer-footer,
-.country {
+.footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .fa-brands,
-.footer-footer p,
-.fa-globe {
+.footer-footer p {
 	color: #898989;
 }
 
-.fa-globe {
-	padding-left: 5px;
-	font-size: 20px;
+.footer-icons {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.fa-brands {
+	font-size: 30px;
 }
