@@ -9,12 +9,6 @@
 	height: 100%;
 }
 
-.hero-banner {
-	display: flex;
-	justify-content: center;
-	height: 90%;
-}
-
 .hero-header {
 	margin-bottom: calc(6rem - 40px);
 	border-bottom: 1px solid transparent;
@@ -29,6 +23,38 @@
 .hero-header i.active,
 .hero-header a:hover {
 	border-bottom: 1px solid #fff;
+}
+
+.hero-banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 90%;
+}
+
+.info {
+	margin: 0 0 6rem 3rem;
+}
+
+.info h3 {
+	color: #fff;
+	font-size: 30px;
+	padding-bottom: 5px;
+}
+
+.info p {
+	color: #fff;
+	padding-bottom: 15px;
+}
+
+.info button {
+	color: #fff;
+	border-color: #fff;
+}
+
+.info button:hover {
+	background-color: #fff;
+	color: #141414;
 }
 
 .product-details {

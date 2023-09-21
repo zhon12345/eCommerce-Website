@@ -7,6 +7,12 @@
 	margin-bottom: 2rem;
 }
 
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
 .products {
 	outline: 2px solid rgba(0, 0, 0, 0.5);
 	outline-offset: -2px;
@@ -16,6 +22,11 @@
 .products:hover {
 	transition: all 0.15s ease-in;
 	box-shadow: var(--box-shadow);
+}
+
+.products a {
+	width: 100%;
+	height: 100%;
 }
 
 .product-details {
@@ -30,19 +41,13 @@
 	font-size: 15px;
 }
 
-.more {
+.more a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.icon {
+.fa-circle-arrow-right {
 	margin-top: 10px;
 	font-size: 35px;
-}
-
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 2rem;
 }
