@@ -1,0 +1,47 @@
+.cart-section {
+	padding: 6rem 0;
+}
+
+.cart-header {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+th {
+	padding: 5px 0;
+	color: #fff;
+	background-color: var(--black);
+}
+
+td {
+	text-align: center;
+}
+
+.cart-info {
+	display: flex;
+}
+
+.cart-info img {
+	width: 100px;
+	margin-right: 10px;
+}
+
+.cart-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+td a {
+	margin-top: 5px;
+	text-align: initial;
+	color: #cc0000;
+	font-size: 12px;
+}
+
+td input {
+	border: 1px solid var(--black);
+	text-align: center;
+	width: 10%;
+	padding: 5px;
+}
