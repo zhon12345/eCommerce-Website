@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="/styles/reset.css" />
 		<link rel="stylesheet" href="/styles/style.css" />
 		<link rel="stylesheet" href="/styles/navbar.css" />
-		<link rel="stylesheet" href="/styles/products.css" />
+		<link rel="stylesheet" href="/styles/cart.css" />
 		<link rel="stylesheet" href="/styles/footer.css" />
 
 		<!-- Font Awesome -->
@@ -27,7 +27,7 @@
 					<!-- Nav Links -->
 					<div class="nav-links">
 						<a href="/index.html">Home</a>
-						<a href="" class="active">Products</a>
+						<a href="/products.html">Products</a>
 						<a href="#about">About</a>
 						<a href="#contact">Contact</a>
 					</div>
@@ -36,7 +36,7 @@
 					<div class="nav-icons">
 						<a href="#search" class="fa-solid fa-magnifying-glass"></a>
 						<div class="cart">
-							<a href="/cart.html" class="fa-solid fa-cart-shopping"></a>
+							<a href="" class="fa-solid fa-cart-shopping"></a>
 							<div class="cartAmount">0</div>
 						</div>
 						<a href="#user" class="fa-solid fa-circle-user"></a>
@@ -45,13 +45,42 @@
 			</div>
 		</nav>
 
-		<!-- Products Section -->
-		<section id="Products" class="products-section">
+		<section class="cart-section">
 			<div class="container">
-				<!-- Products Header -->
-				<h1 class="products-header">All Products</h1>
+				<div class="cart-container">
+					<!-- Cart Header -->
+					<h1 class="cart-header">Shopping Cart</h1>
 
-				<div class="grid-container"></div>
+					<div class="table-container">
+						<table width="100%">
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>Subtotal</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="cart-info">
+											<img src="/assets/products/12C/phone.png" />
+											<div class="cart-text">
+												<p>Redmi 12C</p>
+												<span>Graphite Gray</span>
+												<a href="">Remove</a>
+											</div>
+										</div>
+									</td>
+									<td>RM 699.00</td>
+									<td><input type="number" value="1" /></td>
+									<td>RM 50.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -137,7 +166,5 @@
 				</div>
 			</div>
 		</section>
-
-		<script src="/script.js"></script>
 	</body>
 </html>

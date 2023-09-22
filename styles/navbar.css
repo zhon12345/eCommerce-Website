@@ -4,6 +4,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
 }
 
 .nav-container {
@@ -39,4 +40,19 @@
 .nav-links a.active {
 	border-bottom: 1px solid var(--black);
 	transition: all 0.3s ease;
+}
+
+.cart {
+	position: relative;
+}
+
+.cartAmount {
+	position: absolute;
+	top: -10px;
+	right: -5px;
+	font-size: 16px;
+	background-color: red;
+	color: #fff;
+	padding: 1px 3px;
+	border-radius: 4px;
 }
