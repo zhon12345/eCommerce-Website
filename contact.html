@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="/css/reset.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/navbar.css" />
-		<link rel="stylesheet" href="/css/product.css" />
+		<link rel="stylesheet" href="/css/contact.css" />
 		<link rel="stylesheet" href="/css/footer.css" />
 
 		<!-- Font Awesome -->
@@ -22,14 +22,14 @@
 			<div class="container">
 				<div class="nav-container">
 					<!-- Nav Logo -->
-					<a class="nav-logo" href="/index.html">Phonix</a>
+					<a class="nav-logo" href="">Phonix</a>
 
 					<!-- Nav Links -->
 					<div class="nav-links">
 						<a href="/index.html">Home</a>
-						<a href="/products.html" class="active">Products</a>
+						<a href="/products.html">Products</a>
 						<a href="#about">About</a>
-						<a href="/contact.html">Contact</a>
+						<a href="/contact.html" class="active">Contact</a>
 					</div>
 
 					<!-- Nav Icons -->
@@ -45,61 +45,99 @@
 			</div>
 		</nav>
 
-		<!-- Banner Section -->
-		<section class="product-hero">
+		<!-- Contact Section -->
+		<section class="contact-section">
 			<div class="container">
-				<div class="hero-container">
-					<h1 class="hero-header"><a href="/products.html">Products</a> / <span class="active">Redmi Note 12 5G</i></h1>
+				<!-- Products Header -->
+				<h1 class="contact-header">Contact Us</h1>
 
-					<div class="hero-banner">
-						<div class="info">
-							<h3>Redmi 12 5G</h3>
-							<p>Live Vivid</p>
-							<a href="#details">
-								<button>Buy Now</button>
-							</a>
+				<div class="contact-container">
+					<div class="contact-details">
+						<span>Get in Touch</span>
+						<h2>Come give us a visit!</h2>
+						<h3>Head Office</h3>
+						<div class="contact-list">
+							<ul>
+								<li>
+									<i class="fa-solid fa-map-location-dot"></i>
+									<p>S-081 - 083, Mid Valley City, Lingkaran Syed Putra, 59200 Kuala Lumpur, Malaysia</p>
+								</li>
+								<li>
+									<i class="fa-solid fa-phone"></i>
+									<p>+(603) 3274 1223</p>
+								</li>
+								<li>
+									<i class="fa-regular fa-envelope"></i>
+									<p>contact@phonix.com</p>
+								</li>
+								<li>
+									<i class="fa-regular fa-clock"></i>
+									<p>Monday - Sunday: 10am - 10pm</p>
+								</li>
+							</ul>
 						</div>
-						<img class="banner" src="/assets/products/Redmi Note 12 5G/banner.webp" height="100%" alt="Redmi Note 12 5G" />
+					</div>
+
+					<div class="contact-map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9058388012513!2d101.67492377564211!3d3.119605053332163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc498eb19ab83d%3A0x564d5053f56991fb!2sMid%20Valley%20Megamall!5e0!3m2!1sen!2smy!4v1695466671064!5m2!1sen!2smy" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Shop Section -->
-		<section id="details" class="product-details">
+		<section class="form-section">
 			<div class="container">
-				<div class="details-container">
-					<div class="gallery">
-						<div class="image-container">
-							<img src="/assets/products/Redmi Note 12 5G/phone1.jpg" width="100%" alt="Redmi Note 12 5G" />
+				<div class="form-container">
+					<form onsubmit="formAlert('Thanks for your message!')" method="get" class="form-details">
+						<span>Leave us a message</span>
+						<h2>We'd love to hear from you!</h2>
+						<input type="text" placeholder="Name" required />
+						<div>
+							<input type="email" placeholder="E-mail" required />
+							<input type="tel" placeholder="Phone Number (Optional)" />
 						</div>
-						<div class="thumbnails-container">
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi Note 12 5G/phone1.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi Note 12 5G/phone2.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi Note 12 5G/phone3.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi Note 12 5G/phone4.jpg" width="100%" />
-							</div>
+						<input type="text" placeholder="Subject" required />
+						<textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+						<button type="submit">Submit</button>
+					</form>
+
+					<div class="form-people">
+						<div class="people">
+							<img src="/assets/contact/zhunonn.jpg" alt="Zhun Onn" />
+							<p>
+								<span>Zhun Onn</span>
+								Manager <br />
+								Phone: +60 11-5205 6571 <br />
+								Email: zhunonn@phonix.com
+							</p>
 						</div>
-					</div>
-					<div class="details">
-						<h4 class="name">Redmi Note 12 5G</h4>
-						<h2 class="price">RM 1,099.00</h2>
-						<select>
-							<option>Select Color</option>
-							<option>Onyx Gray</option>
-							<option>Ice Blue</option>
-							<option>Forest Green</option>
-						</select>
-						<button onclick="addCart('yucqehjm')">Add to Cart</button>
-						<h4>Product Description</h4>
-						<span> The Redmi Note 12 5G, trusted by it's users, the classic Note now features a 'Snapdragon 5G' and segment leading 120hz Super AMOLED, once again making it the answer for a next-gen smartphone experience. The Redmi Note 12 5G is the first phone in it's price range to have a combination of Snapdragon 5G, Super AMOLED Display and 120Hz refresh rate makes it perfect for gaming and watching online content. </span>
+						<div class="people">
+							<img src="/assets/contact/kimtong.jpg" alt="Kim Tong" />
+							<p>
+								<span>Kim Tong</span>
+								Manager <br />
+								Phone: +60 17-273 6574 <br />
+								Email: kimtong@phonix.com
+							</p>
+						</div>
+						<div class="people">
+							<img src="/assets/contact/kahwai.jpg" alt="Kah Wai" />
+							<p>
+								<span>Kah Wai</span>
+								Manager <br />
+								Phone: +60 17-031 4054 <br />
+								Email: kahwai@phonix.com
+							</p>
+						</div>
+						<div class="people">
+							<img src="/assets/contact/kinmun.jpg" alt="Kim Mun" />
+							<p>
+								<span>Kin Mun</span>
+								Manager <br />
+								Phone: +60 17-120 3772 <br />
+								Email: kimmun@phonix.com
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -130,7 +168,7 @@
 							<h3>Shop</h3>
 							<ul>
 								<li><a>Trade in</a></li>
-								<li><a href="/contact.html">Locations</a></li>
+								<li><a href="">Locations</a></li>
 								<li><a>Offers and Promos</a></li>
 								<li><a>Student Discounts</a></li>
 							</ul>
@@ -148,7 +186,7 @@
 							<h3>Company</h3>
 							<ul>
 								<li><a>About Us</a></li>
-								<li><a href="/contact.html">Contact</a></li>
+								<li><a href="">Contact</a></li>
 								<li><a>News</a></li>
 								<li><a>Resources</a></li>
 							</ul>
@@ -188,7 +226,6 @@
 			</div>
 		</section>
 
-		<script src="../js/calculate.js"></script>
-		<script src="../js/script.js"></script>
+		<script src="/js/calculate.js"></script>
 	</body>
 </html>

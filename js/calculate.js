@@ -11,3 +11,7 @@ calculate();
 function formatNum(num) {
     return (num).toLocaleString('en', {maximumFractionDigits: 2, minimumFractionDigits: 2})
 }
+
+function formAlert(text) {
+   return alert(text);
+}
