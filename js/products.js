@@ -43,7 +43,7 @@ const products = [
     },
     {
         id: "dmwmvgtg",
-        name: "Redmi 12S",
+        name: "Redmi Note 12S",
         tagline: "Live vivid",
         url: "#",
         price: "999",
