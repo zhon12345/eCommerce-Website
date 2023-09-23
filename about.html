@@ -9,8 +9,11 @@
 		<link rel="stylesheet" href="/css/reset.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/navbar.css" />
-		<link rel="stylesheet" href="/css/product.css" />
+		<link rel="stylesheet" href="/css/about.css" />
 		<link rel="stylesheet" href="/css/footer.css" />
+
+		<!-- Micons -->
+		<link rel="stylesheet" href="https://cdn.alsgp0.fds.api.mi-img.com/xiaomi-b2c-i18n-upload/i18n/micon/iconfont.css" />
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,13 +25,13 @@
 			<div class="container">
 				<div class="nav-container">
 					<!-- Nav Logo -->
-					<a class="nav-logo" href="/index.html">Phonix</a>
+					<a class="nav-logo" href="">Phonix</a>
 
 					<!-- Nav Links -->
 					<div class="nav-links">
 						<a href="/index.html">Home</a>
-						<a href="/products.html" class="active">Products</a>
-						<a href="/about.html">About</a>
+						<a href="/products.html">Products</a>
+						<a href="/about.html" class="active">About</a>
 						<a href="/contact.html">Contact</a>
 					</div>
 
@@ -45,62 +48,42 @@
 			</div>
 		</nav>
 
-		<!-- Banner Section -->
-		<section class="product-hero">
+		<!-- About Section -->
+		<section class="about-section">
 			<div class="container">
-				<div class="hero-container">
-					<h1 class="hero-header"><a href="/products.html">Products</a> / <span class="active">Redmi 12C</span></h1>
+				<!-- About Header -->
+				<h1 class="section-header">About Phonix</h1>
+				<div class="divider"></div>
 
-					<div class="hero-banner">
-						<div class="info">
-							<h3>Xiaomi 13 Ultra</h3>
-							<p>Big on Speed, Big on Style</p>
-							<a href="#details">
-								<button>Buy Now</button>
-							</a>
-						</div>
-						<img class="banner" src="/assets/products/Redmi 12C/banner.webp" height="100%" alt="Redmi 12C" />
+				<div class="about-container">
+					<div class="mission grid">
+						<h3>Mission</h3>
+						<blockquote>&nbsp;To empower users with cutting-edge, accessible devices that deliver quality and affordability in one complete package.&nbsp;</blockquote>
 					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Shop Section -->
-		<section id="details" class="product-details">
-			<div class="container">
-				<div class="details-container">
-					<div class="gallery">
-						<div class="image-container">
-							<img src="/assets/products/Redmi 12C/phone1.jpg" width="100%" alt="Redmi 12C" />
-						</div>
-						<div class="thumbnails-container">
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi 12C/phone1.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi 12C/phone2.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi 12C/phone3.jpg" width="100%" />
-							</div>
-							<div class="thumbnails">
-								<img src="/assets/products/Redmi 12C/phone4.jpg" width="100%" />
-							</div>
+					<div class="vision grid">
+						<h3>Vision</h3>
+						<blockquote>&nbsp;Construct a community of like-minded tech enthusiasts while enriching everyone's digital journey.&nbsp;</blockquote>
+					</div>
+					<div class="socials grid">
+						<h3>Follow Us</h3>
+						<div class="socials-logo">
+							<a class="fa-brands fa-x-twitter"></a>
+							<a class="fa-brands fa-instagram"></a>
+							<a class="fa-brands fa-facebook"></a>
+							<a class="fa-brands fa-youtube"></a>
 						</div>
 					</div>
-					<div class="details">
-						<h4 class="name">Redmi 12C</h4>
-						<h2 class="price">RM 699.00</h2>
-						<select>
-							<option>Select Color</option>
-							<option>Graphite Gray</option>
-							<option>Ocean Blue</option>
-							<option>Mint Green</option>
-							<option>Lavender Purple</option>
-						</select>
-						<button onclick="addCart('pftymued')">Add to Cart</button>
-						<h4>Product Description</h4>
-						<span> The Redmi 12C now comes with the high performing Mediatek Helio G85 to deliver great day-to day performance in it's price segment, it features a new and stylish striped design in four refreshing colors that cater to every users style aspiration. Not to forget the Redmi 12C features an IP 52 rating and oleophobic coating which is reliable and the perfect daily driver for everyday use. </span>
+					<div class="brands grid">
+						<h3>Partners</h3>
+						<div class="brands-logo">
+							<a href="https://www.mi.com/global/phone/#xiaomi" target="_blank" class="micon micon-nav-xiaomi"></a>
+							<a href="https://www.mi.com/global/phone/#redmi" target="_blank" class="micon micon-nav-redmi"></a>
+							<a href="https://www.po.co/global/" target="_blank" class="micon micon-nav-poco"></a>
+						</div>
+					</div>
+					<div class="company grid">
+						<h3>Company</h3>
+						<blockquote>&nbsp;Founded by four friends united by a shared passion for technology. With an unwavering focus on quality and the passion to make advanced tech more accessible.&nbsp;</blockquote>
 					</div>
 				</div>
 			</div>
@@ -189,7 +172,6 @@
 			</div>
 		</section>
 
-		<script src="../js/calculate.js"></script>
-		<script src="../js/script.js"></script>
+		<script src="/js/calculate.js"></script>
 	</body>
 </html>

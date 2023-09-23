@@ -1,5 +1,5 @@
 function generateCart() {
-    const cartContainer = document.querySelectorAll("h1.cart-header, div.cart-container, div.total-price");
+    const cartContainer = document.querySelectorAll("h1#cart-header, div.cart-container, div.total-price");
     const cartBody = document.querySelector(".cart-container tbody");
     const emptyCart = document.querySelector(".empty-container");
 
@@ -60,6 +60,8 @@ function generateTotal() {
         accumulator.amount += items.num;
         return accumulator;
     }, { total: 0, amount: 0 });
+
+    const discount = coupon.map(item => item.amount).reduce((accumulator, coupon) => accumulator + coupon, 0)
     
     const shipping = amount > 5 ? (amount / 10) * 5 : 3
 
@@ -73,9 +75,9 @@ function generateTotal() {
             <td colspan="2">
                 <div class="coupon">
                     <h3>Apply Coupons</h3>
-                    <form class="coupon-input">
-                        <input type="text" placeholder="Enter Coupon Code" required />
-                        <button type="submit">Apply</button>
+                    <form class="coupon-input" method="GET">
+                        <input type="text" name="coupon" placeholder="Enter Coupon Code" required />
+                        <button type="submit" onclick="validateCoupon()">Apply</button>
                     </form>
                 </div>
             </td>
@@ -90,9 +92,9 @@ function generateTotal() {
 			<td>
                 <div class="total">
                     <p>RM<span class="amount">${formatNum(total)}</span></p>
-                    <p>RM<span class="amount">${formatNum(0)}</span></p>
+                    <p>RM<span class="amount">${formatNum(discount)}</span></p>
                     <p>RM<span class="amount">${formatNum(shipping)}</span></p>
-                    <p>RM<span class="amount">${formatNum(total + shipping)}</span></p>
+                    <p>RM<span class="amount">${formatNum(total - discount + shipping)}</span></p>
                 </div>
             </td>
 		</tr>
@@ -147,4 +149,37 @@ function removeItem(id, index) {
     generateCart();
     calculate();
     localStorage.setItem("cart", JSON.stringify(basket));
+}
+
+function validateCoupon() {
+    const form = document.querySelector(".coupon-input");
+    const data = new FormData(form);
+    const value = data.get("coupon");
+
+    if (!value) return;
+
+    if(value !== 'DFT1G15') {
+        alert("Invalid coupon code!");
+        return;
+    } 
+
+    const search = coupon.find(item => item.code === value);
+
+    if (search !== undefined && search.code === value) {
+        alert("You've already used this code!");
+        return;
+    }
+        
+    coupon.push({
+        code: 'DFT1G15',
+        amount: 5
+    });
+
+    localStorage.setItem("discount", JSON.stringify(coupon));
+    alert("You've received a discount of RM 5.00!");
+}
+
+function clearCoupon() {
+    coupon = [];
+    localStorage.setItem("discount", JSON.stringify(coupon));
 }

@@ -1,12 +1,3 @@
-.products-section {
-	padding: 6rem 0;
-}
-
-.products-header {
-	font-size: 2rem;
-	margin-bottom: 2rem;
-}
-
 .grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
