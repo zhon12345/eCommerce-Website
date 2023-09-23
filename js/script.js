@@ -29,7 +29,7 @@ function addCart(id) {
     const select = document.querySelector("select");
 
     if (select.selectedIndex === 0) {
-        window.alert("Please select a color!");
+        alert("Please select a color!");
         return;
     }
 
@@ -40,7 +40,7 @@ function addBasket(id, index, color) {
     let search = basket.find(item => item.id === id && item.color.index === index);
 
     if (search !== undefined && search.color.index === index ) {
-        window.alert("Product is already in cart!");
+        alert("Product is already in cart!");
         return;
     }
 

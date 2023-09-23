@@ -1,11 +1,5 @@
 .cart-section {
-	padding: 6rem 0;
 	min-height: 100vh;
-}
-
-.cart-header {
-	font-size: 2rem;
-	margin-bottom: 2rem;
 }
 
 .cart-header,
@@ -13,6 +7,7 @@
 	display: none;
 }
 
+/* Cart Table */
 th {
 	padding: 5px 0;
 	color: #fff;
@@ -88,7 +83,6 @@ tfoot td {
 }
 
 /* Coupon Section */
-
 tfoot tr:nth-child(2) td:nth-child(1) {
 	vertical-align: baseline;
 }
@@ -143,7 +137,6 @@ tfoot tr:nth-child(2) td:nth-child(3) {
 }
 
 /* Empty Cart Section */
-
 .checkout {
 	padding-bottom: 0;
 }

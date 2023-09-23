@@ -1,0 +1,125 @@
+.section-header {
+	text-align: center;
+}
+
+.divider {
+	border-bottom: 1px solid var(--black);
+	width: 110px;
+	margin: auto;
+	margin-bottom: 2rem;
+}
+
+.about-container {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		'mission mission vision'
+		'socials brands brands'
+		'socials company company';
+	gap: 1rem;
+	width: 70%;
+	margin: auto;
+	text-align: justify;
+}
+
+.grid {
+	padding: 10px;
+	font-size: 18px;
+	border: 1px solid var(--black);
+}
+
+.mission {
+	grid-area: mission;
+}
+
+.vision {
+	grid-area: vision;
+}
+
+.socials {
+	grid-area: socials;
+}
+
+.brands {
+	grid-area: brands;
+}
+
+.company {
+	grid-area: company;
+}
+
+/* Mission, Vision, Company Grid */
+.about-container h3 {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+blockquote::before {
+	content: '\201C';
+}
+
+blockquote::after {
+	content: '\201D';
+}
+
+/* Follow Us Grid */
+.socials-logo {
+	display: grid;
+	text-align: center;
+}
+
+.socials-logo a {
+	font-size: 40px;
+	padding: 0.3rem;
+}
+
+.fa-instagram {
+	font-size: 45px;
+}
+
+.fa-x-twitter:hover {
+	color: black;
+}
+
+.socials-logo .fa-instagram:hover {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fa-facebook:hover {
+	color: #1877f2;
+}
+
+.fa-youtube:hover {
+	color: #ff0000;
+}
+
+/* Partners Grid */
+.brands-logo {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.brands-logo a {
+	font-size: 50px;
+	color: #898989;
+}
+
+.fa-brands:hover,
+.brands-logo a:hover {
+	transition: all 0.15s ease-in;
+}
+
+.micon-nav-xiaomi:hover {
+	color: #ff6900;
+}
+
+.micon-nav-redmi:hover {
+	color: #cc0000;
+}
+
+.micon-nav-poco:hover {
+	color: #ffd400;
+}

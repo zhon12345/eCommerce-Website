@@ -25,11 +25,20 @@
 	background-color: #758285;
 }
 
-/* General Section Css */
+/* Universal Styles */
 .container {
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 0 19px;
+}
+
+.section-header {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+section[class$='section'] {
+	padding: 6rem 0;
 }
 
 button {
