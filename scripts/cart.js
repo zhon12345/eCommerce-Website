@@ -109,7 +109,6 @@ function generateTotal() {
 
 function increment(id, index) {
     const search = basket.find(item => item.id === id && item.color.index === index);
-    console.log(search);
 
     search.num += 1;
 
