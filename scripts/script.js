@@ -2,10 +2,10 @@ function generateShop() {
     const productContainer = document.querySelector(".grid-container");
     productContainer.innerHTML = products.map(item => {
         return `
-        <div class="products" id="${item.id}">
+        <div ${item.url === '#' ? 'class="products disabled"' : 'class="products"'} id="${item.id}">
             <a href="${item.url}">
                 <div class="product-header">
-                    <img src="/assets/products/${item.folder}/phone.png" width="100%" alt="${item.name}" />
+                    <img src="/assets/products/${item.name}/phone.png" width="100%" alt="${item.name}" />
                 </div>
                 <div class="product-details">
                     <h1>${item.name}</h1>
