@@ -1,10 +1,16 @@
 .cart-section {
 	padding: 6rem 0;
+	min-height: 100vh;
 }
 
 .cart-header {
 	font-size: 2rem;
 	margin-bottom: 2rem;
+}
+
+.cart-header,
+.cart-container {
+	display: none;
 }
 
 th {
@@ -30,18 +36,150 @@ td {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: initial;
+}
+
+.cart-text span {
+	font-size: 14px;
 }
 
 td a {
 	margin-top: 5px;
-	text-align: initial;
 	color: #cc0000;
 	font-size: 12px;
 }
 
-td input {
+td a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.quantity-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 50%;
+	margin: auto;
+	padding: 10px 5px;
 	border: 1px solid var(--black);
-	text-align: center;
-	width: 10%;
-	padding: 5px;
+	border-radius: 4px;
+}
+
+.quantity-wrapper span.num {
+	width: 1rem;
+}
+
+.fa-plus,
+.fa-minus {
+	cursor: pointer;
+}
+
+.subtotal {
+	width: 10rem;
+}
+
+.div {
+	border-bottom: 5px solid var(--black);
+}
+
+tfoot td {
+	padding: 1rem 0;
+}
+
+/* Coupon Section */
+
+tfoot tr:nth-child(2) td:nth-child(1) {
+	vertical-align: baseline;
+}
+
+.coupon {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 80%;
+}
+
+.coupon h3 {
+	font-size: 22px;
+	padding-bottom: 10px;
+}
+
+.coupon-input {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+}
+
+.coupon-input input {
+	width: 75%;
+	padding: 0 10px;
+}
+
+.coupon-input button {
+	width: 6rem;
+}
+
+/* Total Section */
+.total {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+tfoot tr:nth-child(2) td:nth-child(2) {
+	display: flex;
+	text-align: start;
+	padding-left: 10px;
+}
+
+tfoot tr:nth-child(2) td:nth-child(3) {
+	padding-right: 10px;
+}
+
+.total p {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Empty Cart Section */
+
+.checkout {
+	padding-bottom: 0;
+}
+
+.checkout button {
+	width: 100%;
+}
+
+.empty-container {
+	height: calc(100vh - 12rem);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.empty-cart {
+	position: relative;
+	font-size: 200px;
+}
+
+.fa-xmark {
+	position: absolute;
+	top: -40px;
+	right: -20px;
+	font-size: 125px;
+	background-color: #cc0000;
+	color: #fff;
+	padding: 0 10px;
+	border-radius: 100px;
+}
+
+.empty-container h1 {
+	font-size: 30px;
+}
+
+.empty-container p {
+	font-size: 20px;
 }

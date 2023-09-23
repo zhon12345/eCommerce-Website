@@ -16,11 +16,11 @@
 
 .hero-header,
 .hero-header a,
-.hero-header i {
+.hero-header span {
 	color: #fff;
 }
 
-.hero-header i.active,
+.hero-header span.active,
 .hero-header a:hover {
 	border-bottom: 1px solid #fff;
 }

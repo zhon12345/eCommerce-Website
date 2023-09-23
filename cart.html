@@ -47,11 +47,11 @@
 
 		<section class="cart-section">
 			<div class="container">
-				<div class="cart-container">
+				<div class="table-container">
 					<!-- Cart Header -->
 					<h1 class="cart-header">Shopping Cart</h1>
 
-					<div class="table-container">
+					<div class="cart-container">
 						<table width="100%">
 							<thead>
 								<tr>
@@ -61,24 +61,25 @@
 									<th>Subtotal</th>
 								</tr>
 							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class="cart-info">
-											<img src="/assets/products/12C/phone.png" />
-											<div class="cart-text">
-												<p>Redmi 12C</p>
-												<span>Graphite Gray</span>
-												<a href="">Remove</a>
-											</div>
-										</div>
-									</td>
-									<td>RM 699.00</td>
-									<td><input type="number" value="1" /></td>
-									<td>RM 50.00</td>
-								</tr>
-							</tbody>
+							<tfoot></tfoot>
+							<tbody></tbody>
 						</table>
+					</div>
+
+					<div class="total-container">
+						<table></table>
+					</div>
+
+					<div class="empty-container">
+						<div class="empty-cart">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<div class="fa-solid fa-xmark"></div>
+						</div>
+						<h1>Your Cart is Empty!</h1>
+						<p>Add something to make me happy :)</p>
+						<a href="/products.html">
+							<button>Continue Shopping</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -166,5 +167,9 @@
 				</div>
 			</div>
 		</section>
+
+		<script src="/scripts/products.js"></script>
+		<script src="/scripts/calculate.js"></script>
+		<script src="/scripts/cart.js"></script>
 	</body>
 </html>
