@@ -24,7 +24,7 @@ function generateCart() {
                 <tr>
                     <td>
                         <div class="cart-info">
-                            <img src="/assets/products/${product.folder}/phone${item.color.index}.jpg" />
+                            <img src="/assets/products/${product.name}/phone${item.color.index}.jpg" />
                             <div class="cart-text">
                                 <p><b>${product.name}</b></p>
                                 <span>${item.color.name}</span>
