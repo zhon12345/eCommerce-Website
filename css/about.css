@@ -9,6 +9,7 @@
 	margin-bottom: 2rem;
 }
 
+/* Grid Layout */
 .about-container {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
