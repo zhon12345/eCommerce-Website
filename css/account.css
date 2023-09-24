@@ -1,0 +1,158 @@
+.account-section {
+	background-color: #383838;
+	padding-top: 10rem !important;
+}
+
+/* Login & Register Card*/
+.account-container {
+	background-color: #fff;
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+	position: relative;
+	width: 350px;
+	height: 450px;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* Login & Register Select */
+.form-select {
+	display: inline-flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.form-select span {
+	color: var(--black);
+	font-weight: bold;
+	padding: 10px;
+	padding-top: 15px;
+	cursor: pointer;
+}
+
+.selector {
+	background-color: var(--black);
+	width: 100px;
+	border: none;
+	height: 3px;
+	margin: 0 auto;
+	transform: translateX(66px);
+	transition: 0.5s;
+}
+
+/* Login & Register Forms */
+.account-container form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 85%;
+	gap: 1rem;
+	position: absolute;
+	bottom: 0;
+	padding: 0 25px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+.login {
+	left: -400px;
+}
+
+.form-input {
+	height: 70px;
+}
+
+.account-container label {
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.value-input {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	height: 60%;
+	margin: 5px 0 10px 0;
+}
+
+.value-input span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+	color: #898989;
+}
+
+.value-input input {
+	font-size: 16px;
+	width: 90%;
+	height: 80%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #898989;
+	box-sizing: border-box;
+}
+
+.value-input a {
+	padding-top: 7px;
+	font-size: 12px;
+	color: #898989;
+}
+
+.value-input a:hover {
+	color: var(--black);
+}
+
+.register button {
+	margin-bottom: 1rem;
+}
+
+/* Third-party Divider */
+.divider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.divider hr {
+	width: 40%;
+}
+
+.divider span {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #898989;
+}
+
+/* Third-party Buttons */
+.login-buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1.5rem;
+}
+
+.login-buttons div {
+	width: 45%;
+	border: 1px solid #898989;
+	border-radius: 2px;
+	transition: all 0.2s ease-in;
+}
+
+.login-buttons div:hover {
+	border-color: var(--black);
+}
+
+.login-buttons a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.login-buttons svg {
+	width: 25px;
+}
+
+.login-buttons span {
+	font-size: 14px;
+}

@@ -61,7 +61,7 @@ function generateTotal() {
         return accumulator;
     }, { total: 0, amount: 0 });
 
-    const discount = coupon.map(item => item.amount).reduce((accumulator, coupon) => accumulator + coupon, 0)
+    const discount = book.map(item => item.amount).reduce((accumulator, coupon) => accumulator + coupon, 0)
     
     const shipping = amount > 5 ? (amount / 10) * 5 : 3
 
@@ -158,28 +158,30 @@ function validateCoupon() {
 
     if (!value) return;
 
-    if(value !== 'DFT1G15') {
+    const coupon = coupons.find(coupon => coupon.code === value);
+
+    if(coupon === undefined) {
         alert("Invalid coupon code!");
         return;
     } 
 
-    const search = coupon.find(item => item.code === value);
+    const search = book.find(item => item.code === value);
 
     if (search !== undefined && search.code === value) {
         alert("You've already used this code!");
         return;
     }
         
-    coupon.push({
-        code: 'DFT1G15',
+    book.push({
+        code: value,
         amount: 5
     });
 
-    localStorage.setItem("discount", JSON.stringify(coupon));
+    localStorage.setItem("discount", JSON.stringify(book));
     alert("You've received a discount of RM 5.00!");
 }
 
 function clearCoupon() {
-    coupon = [];
-    localStorage.setItem("discount", JSON.stringify(coupon));
+    book = [];
+    localStorage.setItem("discount", JSON.stringify(book));
 }

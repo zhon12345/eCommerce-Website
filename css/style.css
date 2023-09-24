@@ -48,6 +48,7 @@ button {
 	transition: all 0.3s ease-in;
 	color: var(--black);
 	font-weight: 500;
+	cursor: pointer;
 }
 
 button:hover {

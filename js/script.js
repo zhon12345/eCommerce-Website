@@ -1,5 +1,5 @@
 function generateShop() {
-    const productContainer = document.querySelector(".grid-container");
+    const productContainer = document.querySelector(".products-container");
     productContainer.innerHTML = products.map(item => {
         return `
         <div ${item.url === '#' ? 'class="products disabled"' : 'class="products"'} id="${item.id}">
@@ -16,14 +16,16 @@ function generateShop() {
     }).join("");
 };
 
-const active = document.querySelector(".image-container");
-const thumbnails = document.querySelectorAll(".thumbnails img");
+function switchImage() {
+    const active = document.querySelector(".image-container");
+    const thumbnails = document.querySelectorAll(".thumbnails img");
 
-thumbnails.forEach(image => {
-    image.addEventListener('click', () => {
-        active.querySelector('img').src = image.src
-    })
-})  
+    thumbnails.forEach(image => {
+        image.addEventListener('click', () => {
+            active.querySelector('img').src = image.src
+        })
+    })  
+}
 
 function addCart(id) {
     const select = document.querySelector("select");
