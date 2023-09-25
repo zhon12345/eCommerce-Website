@@ -35,10 +35,10 @@ const products = [
         price: 2319,
     },
     {
-        id: "qvmcyczm",
+        id: "ncnlvfwp",
         name: "Poco X5 5G",
         tagline: "Everything. Just right.",
-        url: "#",
+        url: "/products/poco-x5-5g.html",
         price: 879,
     },
     {
