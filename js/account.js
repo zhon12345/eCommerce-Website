@@ -1,86 +1,46 @@
-function checkInputs(num) {
-    if (num === 0) {
-        checkUsername()
-        checkPass()
-        
-        if (checkUsername() && checkPass()) {
-            return true;
-        }
+const form = document.querySelector(".login");
+const nameField = document.querySelector("#username");
+const passField = document.querySelector("#password");
+const nameInput = nameField.parentElement;
+const passInput = passField.parentElement;
+
+function login() {
+    checkUsername();
+    checkPass();
+
+    if (nameInput.classList.contains('error') || passInput.classList.contains('error')) {
+        return;
     }
 
-    if (num === 1) {
-        checkUsername()
-        checkEmail()
-        checkPass()
-        checkPass2() 
+    person.push({
+        username: nameField.value
+    })
 
-        if (checkUsername() && checkEmail() && checkPass() && checkPass2()) {
-            return true;
-        }
-    }
-
-    return false;
+    localStorage.setItem("user", JSON.stringify(person));
+    form.submit();
 }
 
 function checkUsername() {
-    const username = document.querySelector("#username");
-    const uName = username.value.trim();
-    
-    if (uName !== '') {
+    if (nameField.value.trim() !== "") {
         success(username);
-        return true;
+        return;
     }
     
     error(username, 'Username cannot be blank');
-    return false;
-}
-
-function checkEmail() {
-    const email = document.querySelector("#email");
-    const uEmail = email.value.trim();
-
-    if (uEmail !== '' && isEmail(uEmail)) {
-        success(email);
-        return true;
-    }
-
-    if (uEmail === '' || !isEmail(uEmail)) {
-        error(email, uEmail === '' ? 'E-mail cannot be blank' : 'Invalid e-mail');
-    } 
-
-    return false;
 }
 
 function checkPass() {
-    const password = document.querySelector("#password");
-    const uPass = password.value.trim();
+    const uPass = passField.value.trim();
 
     if (uPass !== '' && uPass.length >= 8) {
         success(password);
-        return true;
+        return;
     }
 
     if (uPass === '' || uPass.length < 8) {
         error(password, uPass === '' ? 'Password cannot be blank' : 'Password must have at least 8 characters');
+        return;
     }
-
-    return false;
-}
-
-function checkPass2() {
-    const password2 = document.querySelector("#password2");
-    const uPass2 = password2.value.trim();
-
-    if (uPass2 !== '' && uPass !== uPass2) {
-            success(password2);
-            return true;
-    }
-
-    if (uPass2 === '' || uPass !== uPass2) {
-        error(password2, uPass2 === '' ? 'Password cannot be blank': 'Passwords does not match');
-    } 
-
-    return false;
 }
 
 function error(input, message) {
@@ -95,8 +55,4 @@ function success(input) {
     const formInput = input.parentElement;
 
     formInput.className = "form-input success";
-}
-
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }

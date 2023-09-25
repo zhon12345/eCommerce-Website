@@ -16,44 +16,15 @@
 
 /* Login & Register Select */
 .header {
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
 	padding: 20px 20px;
 	padding-bottom: 0;
 }
 
-.form-select {
-	display: inline-flex;
-	justify-content: space-evenly;
-	width: 100%;
-}
-
-.form-select a {
-	color: var(--black);
-	font-weight: bold;
-	padding: 10px;
-	padding-top: 15px;
-	cursor: pointer;
-}
-
-.selector {
-	background-color: var(--black);
-	width: 100px;
-	border: none;
-	height: 3px;
-	margin: 0 auto;
-}
-
-.selector#login {
-	transform: translateX(-79px);
-}
-
-.selector#register {
-	transform: translateX(66px);
-}
-
 /* Login & Register Forms */
 .account-container form {
-	background-color: #fff;
-	position: absolute;
 	width: 100%;
 	padding: 30px 40px;
 	box-sizing: border-box;
