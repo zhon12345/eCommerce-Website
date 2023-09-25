@@ -1,58 +1,26 @@
-function generateShop() {
-    const productContainer = document.querySelector(".products-container");
-    productContainer.innerHTML = products.map(item => {
-        return `
-        <div ${item.url === '#' ? 'class="products disabled"' : 'class="products"'} id="${item.id}">
-            <a href="${item.url}">
-                <div class="product-header">
-                    <img src="/assets/products/${item.name}/phone.png" width="100%" alt="${item.name}" />
-                </div>
-                <div class="product-details">
-                    <h1>${item.name}</h1>
-                    <button>Learn More</button>
-                </div>
-            </a>
-        </div>`
-    }).join("");
-};
+let basket = JSON.parse(localStorage.getItem("cart")) || [];
+let book = JSON.parse(localStorage.getItem("discount")) || [];
+let person = JSON.parse(localStorage.getItem("user")) || [];
 
-function switchImage() {
-    const active = document.querySelector(".image-container");
-    const thumbnails = document.querySelectorAll(".thumbnails img");
-
-    thumbnails.forEach(image => {
-        image.addEventListener('click', () => {
-            active.querySelector('img').src = image.src
-        })
-    })  
+function calculate() {
+    const cartAmount = document.querySelector(".cart-amount");
+    const totalQuantity = basket.reduce((sum, item) => sum + item.num, 0);
+    cartAmount.innerHTML = totalQuantity;
 }
 
-function addCart(id) {
-    const select = document.querySelector("select");
+calculate();
 
-    if (select.selectedIndex === 0) {
-        alert("Please select a color!");
-        return;
-    }
-
-    addBasket(id, select.selectedIndex ,select.value);
+function formatNum(num) {
+    return (num).toLocaleString('en', {maximumFractionDigits: 2, minimumFractionDigits: 2})
 }
 
-function addBasket(id, index, color) {
-    let search = basket.find(item => item.id === id && item.color.index === index);
+function login() {
+    if (person.length > 0) {
+        const userIcon = document.querySelector(".fa-circle-user");
 
-    if (search !== undefined && search.color.index === index ) {
-        alert("Product is already in cart!");
-        return;
+        const result = confirm("You're already logged in, go to cart page?");
+        return result ? window.location = `${window.location.origin}/cart.html` : "";
     }
 
-    basket.push({
-        id: id,
-        color: {index: index, name: color},
-        num: 1
-    })
-
-    localStorage.setItem("cart", JSON.stringify(basket));
-
-    calculate();
+    window.location = `${window.location.origin}/login.html`
 }

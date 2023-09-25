@@ -4,7 +4,7 @@ const passField = document.querySelector("#password");
 const nameInput = nameField.parentElement;
 const passInput = passField.parentElement;
 
-function login() {
+function formLogin() {
     checkUsername();
     checkPass();
 

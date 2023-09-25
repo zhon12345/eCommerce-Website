@@ -10,14 +10,14 @@ const products = [
         id: "eedglnll",
         name: "Xiaomi 13 Ultra",
         tagline: "A shot above",
-        url: "/products/xiaomi-13-ultra.html",
+        url: "./products/xiaomi-13-ultra.html",
         price: 5199,
     },
     {
         id: "ujpkxroa",
         name: "Xiaomi 13 Pro",
         tagline: "Behind the masterpiece",
-        url: "/products/xiaomi-13-pro.html",
+        url: "./products/xiaomi-13-pro.html",
         price: 4599,
     },
     {
@@ -38,14 +38,14 @@ const products = [
         id: "ncnlvfwp",
         name: "Poco X5 5G",
         tagline: "Everything. Just right.",
-        url: "/products/poco-x5-5g.html",
+        url: "./products/poco-x5-5g.html",
         price: 879,
     },
     {
         id: "yucqehjm",
         name: "Redmi Note 12 5G",
         tagline: "Live vivid",
-        url: "/products/redmi-note-12-5g.html",
+        url: "./products/redmi-note-12-5g.html",
         price: 1099,
     },
     {
@@ -59,7 +59,7 @@ const products = [
         id: "pftymued",
         name: "Redmi 12C",
         tagline: "Big on Speed, Big on Style",
-        url: "/products/redmi-12c.html",
+        url: "./products/redmi-12c.html",
         price: 699,
     }
 ]
