@@ -1,14 +1,14 @@
 .account-section {
 	background-color: #383838;
-	padding-top: 9rem !important;
 	min-height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
 /* Login & Register Card*/
-.account-container {
+.forms-container {
 	background-color: #fff;
 	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
-	position: relative;
 	width: 400px;
 	max-width: 100%;
 	margin: auto;
@@ -24,7 +24,7 @@
 }
 
 /* Login & Register Forms */
-.account-container form {
+.forms-container form {
 	width: 100%;
 	padding: 30px 40px;
 	box-sizing: border-box;
@@ -108,7 +108,7 @@
 	color: #e74c3c;
 }
 
-.account-container button {
+.forms-container button {
 	display: block;
 	width: 100%;
 	margin-top: 20px;
