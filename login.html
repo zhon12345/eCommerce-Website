@@ -25,7 +25,7 @@
 			<div class="container">
 				<div class="nav-container">
 					<!-- Nav Logo -->
-					<a class="nav-logo" href="/contact.html">Phonix</a>
+					<a class="nav-logo" href="/index.html">Phonix</a>
 
 					<!-- Nav Links -->
 					<div class="nav-links">
@@ -53,18 +53,14 @@
 			<div class="container">
 				<div class="account-container">
 					<div class="header">
-						<div class="form-select">
-							<a href="/login.html">Login</a>
-							<a href="/register.html">Register</a>
-						</div>
-						<hr class="selector" id="login" />
+						<h1>User Login</h1>
 					</div>
 
-					<form class="login" onsubmit="return checkInputs(0)" action="/cart.html" method="get">
+					<form class="login" action="/cart.html" method="get">
 						<div class="form-input">
 							<label for="username">Username</label>
 							<span class="fa-solid fa-user"></span>
-							<input type="text" id="username" placeholder="Enter username" />
+							<input type="text" id="username" name="username" placeholder="Enter username" />
 							<i class="fa-solid fa-circle-check"></i>
 							<i class="fa-solid fa-circle-exclamation"></i>
 							<small>Error Message</small>
@@ -80,7 +76,7 @@
 							<a>Forgot password?</a>
 						</div>
 
-						<button type="submit">Login</button>
+						<button onclick="login()" type="button">Login</button>
 
 						<div class="third-party">
 							<div class="divider">

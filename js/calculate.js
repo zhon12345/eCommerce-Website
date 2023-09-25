@@ -1,5 +1,6 @@
 let basket = JSON.parse(localStorage.getItem("cart")) || [];
 let book = JSON.parse(localStorage.getItem("discount")) || [];
+let person = JSON.parse(localStorage.getItem("user")) || [];
 
 function calculate() {
     const cartAmount = document.querySelector(".cart-amount");
