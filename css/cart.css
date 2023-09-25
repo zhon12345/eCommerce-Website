@@ -162,8 +162,8 @@ tfoot tr:nth-child(2) td:nth-child(3) {
 .fa-xmark {
 	position: absolute;
 	top: -40px;
-	right: -20px;
-	font-size: 125px;
+	right: -25px;
+	font-size: 100px;
 	background-color: #cc0000;
 	color: #fff;
 	padding: 0 10px;

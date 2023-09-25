@@ -18,13 +18,15 @@ function generateCart() {
 
         emptyCart.style.display = 'none';
 
+        document.querySelector("#cart-header").innerText = `${person[0].username}'s Cart`
+
         cartBody.innerHTML = basket.map(item => {
             const product = products.find(product => product.id === item.id) || [];
             return `
                 <tr>
                     <td>
                         <div class="cart-info">
-                            <img src="/assets/products/${product.name}/phone${item.color.index}.jpg" />
+                            <img src="./assets/products/${product.name}/phone${item.color.index}.jpg" />
                             <div class="cart-text">
                                 <p><b>${product.name}</b></p>
                                 <span>${item.color.name}</span>
@@ -102,7 +104,7 @@ function generateTotal() {
         <tr>
             <td colspan="2"></td>
 			<td colspan="2" class="checkout">
-                <a href="/checkout.html">
+                <a href="./checkout.html">
                     <button>Checkout</button>
                 </a>
             </td>
