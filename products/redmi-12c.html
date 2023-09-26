@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
-	<body onload="switchImage()">
+	<body onclick="switchImage(0)">
 		<!-- Navigation Bar -->
 		<nav class="navbar">
 			<div class="container">
@@ -59,7 +59,14 @@
 								<button>Buy Now</button>
 							</a>
 						</div>
-						<img class="banner" src="../assets/products/Redmi 12C/banner.webp" height="100%" alt="Redmi 12C" />
+						<img class="banner" src="../assets/products/Redmi 12C/banner.webp" height="100%" alt="Redmi 12C" usemap="#banner-map" />
+
+						<map name="banner-map">
+							<area shape="rect" coords="0,0,113,659" href="#details" onclick="switchImage(1)" alt="black" />
+							<area shape="rect" coords="114,0,230,659" href="#details" onclick="switchImage(2)" alt="blue" />
+							<area shape="rect" coords="229,0,342,659" href="#details" onclick="switchImage(3)" alt="green" />
+							<area shape="rect" coords="343,0,553,659" href="#details" onclick="switchImage(4)" alt="purple" />
+						</map>
 					</div>
 				</div>
 			</div>

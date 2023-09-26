@@ -16,15 +16,26 @@ function generateShop() {
     }).join("");
 };
 
-function switchImage() {
+function switchImage(num) {
     const active = document.querySelector(".image-container");
     const thumbnails = document.querySelectorAll(".thumbnails img");
 
-    thumbnails.forEach(image => {
-        image.addEventListener('click', () => {
-            active.querySelector('img').src = image.src
-        })
-    })  
+    if (num === 0) {
+        thumbnails.forEach(image => {
+            image.addEventListener('click', () => {
+                active.querySelector('img').src = image.src
+            });
+        });
+        return;
+    }
+
+    active.querySelector('img').src = thumbnails[num - 1].src
+}
+
+function popupToggle() {
+    const popup = document.querySelector(".popup");
+
+    popup.classList.toggle("active")
 }
 
 function addCart(id) {

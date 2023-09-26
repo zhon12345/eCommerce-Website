@@ -1,16 +1,9 @@
-function switchForm(mode) {
-    const login = document.querySelector(".login-form");
-    const signup = document.querySelector(".signup-form")
+function switchForm() {
+    const forms = document.querySelectorAll(".login-form, .signup-form");
 
-    if (mode === "signup") {
-        login.className = 'login-form not-active';
-        signup.className = 'signup-form';
-    }
-
-    if (mode === "login") {
-        login.className = 'login-form';
-        signup.className = 'signup-form not-active';
-    }
+    forms.forEach(form => {
+        form.classList.toggle("not-active")
+    });
 }
 
 const loginForm = document.querySelector(".login");

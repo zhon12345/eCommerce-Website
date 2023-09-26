@@ -1,22 +1,17 @@
 function generateCart() {
-    const cartContainer = document.querySelectorAll("h1#cart-header, div.cart-container, div.total-price");
+    const cartElements = document.querySelectorAll("h1#cart-header, div.cart-container, .empty-container");
     const cartBody = document.querySelector(".cart-container tbody");
-    const emptyCart = document.querySelector(".empty-container");
 
     if (basket.length === 0) {
-        emptyCart.style.display = 'flex';
-
-        cartContainer.forEach(element => {
-            element.style.display = 'none';
+        cartElements.forEach(element => {
+            element.classList.toggle("not-active");
         });
     }
 
     if (basket.length !== 0) {
-        cartContainer.forEach(element => {
-            element.style.display = 'revert';
+        cartElements.forEach(element => {
+            element.classList.toggle("not-active");
         });
-
-        emptyCart.style.display = 'none';
 
         document.querySelector("#cart-header").innerText = `${person[0].username}'s Cart`
 

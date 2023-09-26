@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
-	<body onload="switchImage()">
+	<body onload="switchImage(0)">
 		<!-- Navigation Bar -->
 		<nav class="navbar">
 			<div class="container">
@@ -49,7 +49,7 @@
 		<section class="product-hero">
 			<div class="container">
 				<div class="hero-container">
-					<h1 class="hero-header"><a href="./products.html">Products</a> / <span class="active">Redmi Note 12 5G</i></h1>
+					<h1 class="hero-header"><a href="./products.html">Products</a> / <span class="active">Redmi Note 12 5G</span></h1>
 
 					<div class="hero-banner">
 						<div class="info">
@@ -59,7 +59,21 @@
 								<button>Buy Now</button>
 							</a>
 						</div>
-						<img class="banner" src="../assets/products/Redmi Note 12 5G/banner.webp" height="100%" alt="Redmi Note 12 5G" />
+						<img class="banner" src="../assets/products/Redmi Note 12 5G/banner.webp" height="100%" alt="Redmi Note 12 5G" usemap="#banner-map" />
+
+						<map name="banner-map">
+							<area shape="rect" coords="0,0,138,659" href="#details" onclick="switchImage(1)" alt="gray" />
+							<area shape="rect" coords="139,0,277,659" href="#details" onclick="switchImage(2)" alt="blue" />
+							<area shape="rect" coords="278,0,419,659" href="#details" onclick="switchImage(3)" alt="green" />
+							<area shape="rect" coords="416,0,644,659" href="#" onclick="popupToggle()" alt="video" />
+						</map>
+
+						<div class="popup">
+							<i class="fa-solid fa-xmark" onclick="popupToggle()"></i>
+							<video muted controls controlsList="nodownload">
+								<source src="../assets/products/Redmi Note 12 5G/video.mp4" type="video/mp4" />
+							</video>
+						</div>
 					</div>
 				</div>
 			</div>
