@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Phonix - Elevate Your Mobile Experience</title>
+
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/navbar.css" />
+		<link rel="stylesheet" href="/css/thanks.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar">
+			<div class="container">
+				<div class="nav-container">
+					<!-- Nav Logo -->
+					<a class="nav-logo" href="./index.html">Phonix</a>
+
+					<!-- Nav Links -->
+					<div class="nav-links">
+						<a href="./index.html">Home</a>
+						<a href="./products.html">Products</a>
+						<a href="./about.html">About</a>
+						<a href="./contact.html">Contact</a>
+					</div>
+
+					<!-- Nav Icons -->
+					<div class="nav-icons">
+						<a href="#search" class="fa-solid fa-magnifying-glass"></a>
+						<div class="cart">
+							<a href="./cart.html" class="fa-solid fa-cart-shopping"></a>
+							<div class="cart-amount">0</div>
+						</div>
+						<a onclick="login()" class="fa-solid fa-circle-user"></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="thanks-section">
+			<div class="container">
+				<div class="thanks-container">
+					<h1>Thank you for your purchase!</h1>
+
+					<div class="order-details">
+						<h3>Order Status</h3>
+						<p>Order successfully received</p>
+
+						<h3>Tracking Information</h3>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter Section -->
+		<section class="newsletter-section">
+			<div class="container">
+				<div class="newsletter-container">
+					<div class="newstext">
+						<h4>Subscribe to our Newsletter</h4>
+						<p>Get updates about our latest product and <span>special offers</span></p>
+					</div>
+					<form class="form">
+						<input type="email" placeholder="Enter e-mail address" required />
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer Section -->
+		<section class="footer-section">
+			<div class="container">
+				<div class="footer-container">
+					<div class="main-footer">
+						<div class="footer-col" id="c1">
+							<h3>Shop</h3>
+							<ul>
+								<li><a>Trade in</a></li>
+								<li><a href="./contact.html">Locations</a></li>
+								<li><a>Offers and Promos</a></li>
+								<li><a>Student Discounts</a></li>
+							</ul>
+						</div>
+						<div class="footer-col" id="c2">
+							<h3>Support</h3>
+							<ul>
+								<li><a>Service</a></li>
+								<li><a>Warranty</a></li>
+								<li><a>User Guide</a></li>
+								<li><a>FAQ</a></li>
+							</ul>
+						</div>
+						<div class="footer-col" id="c3">
+							<h3>Company</h3>
+							<ul>
+								<li><a href="./about.html">About Us</a></li>
+								<li><a href="./contact.html">Contact</a></li>
+								<li><a>News</a></li>
+								<li><a>Resources</a></li>
+							</ul>
+						</div>
+						<div class="footer-col" id="c4">
+							<div class="language">
+								<h3>Language</h3>
+								<select>
+									<option>English</option>
+								</select>
+							</div>
+							<div class="socials">
+								<h3>Socials</h3>
+								<div class="social-icons">
+									<a class="fa-brands fa-x-twitter"></a>
+									<a class="fa-brands fa-instagram"></a>
+									<a class="fa-brands fa-facebook"></a>
+									<a class="fa-brands fa-youtube"></a>
+									<a href="https://github.com/zhon12345/eCommerce-Website" class="fa-brands fa-github"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<!-- Sub Footer -->
+					<div class="sub-footer">
+						<div class="copyright">
+							<p class="left">Copyright &copy; 2023 - 2023 Phonix. All Rights Reserved</p>
+						</div>
+						<div class="legal">
+							<a>User Agreement</a>
+							<a>Privacy Policy</a>
+							<a>Cookie Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>
