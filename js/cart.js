@@ -13,7 +13,9 @@ function generateCart() {
             element.classList.toggle("not-active");
         });
 
-        document.querySelector("#cart-header").innerText = `${person[0].username}'s Cart`
+        const user = person.find(users => users.loggedin === true);
+
+        user === undefined ? "" : document.querySelector("#cart-header").innerText = `${user.username}'s Cart`
 
         cartBody.innerHTML = basket.map(item => {
             const product = products.find(product => product.id === item.id) || [];
@@ -99,9 +101,7 @@ function generateTotal() {
         <tr>
             <td colspan="2"></td>
 			<td colspan="2" class="checkout">
-                <a href="./checkout.html">
-                    <button>Checkout</button>
-                </a>
+                    <button onclick="checkout()">Checkout</button>
             </td>
 		</tr>`
 }
@@ -178,7 +178,29 @@ function validateCoupon() {
     alert("You've received a discount of RM 5.00!");
 }
 
+function clearCart() {
+    basket = [];
+    localStorage.setItem("cart", JSON.stringify(basket));
+}
+
 function clearCoupon() {
     book = [];
     localStorage.setItem("discount", JSON.stringify(book));
+}
+
+function checkout() {
+    const search = person.find(user => user.loggedin === true);;
+
+    if (search === undefined) {
+        login();
+        return;
+    }
+
+    if (confirm("Are you sure you want to proceed?") === true) {
+        clearCart();
+        clearCoupon();
+
+        window.location = `${window.location.origin}/thanks.html`
+        return;
+    }   
 }

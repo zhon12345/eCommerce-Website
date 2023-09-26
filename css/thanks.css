@@ -1,0 +1,31 @@
+.thanks-section {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.thanks-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.thanks-container h1 {
+	font-size: 30px;
+}
+
+.order-details {
+	width: 100%;
+	background-color: #cfcfcf;
+	padding: 30px;
+}
+
+.order-details h3 {
+	font-size: 22px;
+}
+
+.order-details p {
+	font-size: 18px;
+}
