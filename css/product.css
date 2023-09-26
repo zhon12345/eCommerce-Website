@@ -32,8 +32,44 @@
 	height: 90%;
 }
 
+.popup.active {
+	display: block;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.popup video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60vw;
+	border-radius: 5px;
+	border: 3px solid #fff;
+	object-fit: cover;
+}
+
+.fa-xmark {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 45px;
+	color: #fff;
+	cursor: pointer;
+}
+
 .info {
-	margin: 0 0 6rem 3rem;
+	margin: 0 1.5rem;
+	margin-bottom: 6rem;
 }
 
 .info h3 {

@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
-	<body onload="switchImage()">
+	<body onload="switchImage(0)">
 		<!-- Navigation Bar -->
 		<nav class="navbar">
 			<div class="container">
@@ -59,7 +59,21 @@
 								<button>Buy Now</button>
 							</a>
 						</div>
-						<img class="banner" style="margin-right: 10rem" src="../assets/products/Poco X5 5G/banner.webp" height="100%" alt="Poco X5 5G" />
+						<img class="banner" src="../assets/products/Poco X5 5G/banner.webp" height="100%" alt="Poco X5 5G" usemap="#banner-map" />
+
+						<map name="banner-map">
+							<area shape="rect" coords="0,0,169,659" href="#details" onclick="switchImage(3)" alt="black" />
+							<area shape="rect" coords="168,0,339,659" href="#details" onclick="switchImage(1)" alt="green" />
+							<area shape="rect" coords="339,0,506,659" href="#details" onclick="switchImage(2)" alt="blue" />
+							<area shape="rect" coords="505,0,734,659" href="#" onclick="popupToggle()" alt="video" />
+						</map>
+
+						<div class="popup">
+							<i class="fa-solid fa-xmark" onclick="popupToggle()"></i>
+							<video muted controls controlsList="nodownload">
+								<source src="../assets/products/Poco X5 5G/video.mp4" type="video/mp4" />
+							</video>
+						</div>
 					</div>
 				</div>
 			</div>
