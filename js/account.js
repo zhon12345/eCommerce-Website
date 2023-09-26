@@ -1,51 +1,119 @@
+function switchForm(mode) {
+    const login = document.querySelector(".login-form");
+    const signup = document.querySelector(".signup-form")
+
+    if (mode === "signup") {
+        login.className = 'login-form not-active';
+        signup.className = 'signup-form';
+    }
+
+    if (mode === "login") {
+        login.className = 'login-form';
+        signup.className = 'signup-form not-active';
+    }
+}
+
 const loginForm = document.querySelector(".login");
 const signupForm = document.querySelector(".signup");
 const loginInput = loginForm.querySelectorAll(".form-input");
 const signupInput = signupForm.querySelectorAll(".form-input");
 
-const username = document.querySelector("#username");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const password2 = document.querySelector("#password2");
 
 loginForm.addEventListener('submit', event => {
-    event.preventDefault();
-    checkUsername();
-    checkPass();
+    const username = loginForm.querySelector("#username");
+    const password = loginForm.querySelector("#password");
 
-    username.addEventListener('keyup', checkUsername);
-    password.addEventListener('keyup', checkPass);
+    event.preventDefault();
+    checkUsername(0, username);
+    checkPass(0, password);
+
+    username.addEventListener('keyup', () => {
+        checkUsername(0, username)
+    });
 
     if (Array.from(loginInput).every(element => !element.classList.contains('error'))) {
         location.href = loginForm.getAttribute("action");
     }
 })
 
-function formSignup() {
-    checkUsername();
-    checkEmail();
-    checkPass();
-    checkPass2();
+signupForm.addEventListener('submit', event => {
+    const username = signupForm.querySelector("#username");
+    const password = signupForm.querySelector("#password");
+    const email = signupForm.querySelector("#email");
+    const password2 = signupForm.querySelector("#password2");
 
-    person.push({
-        username: username.value
+    event.preventDefault();
+    checkUsername(1, username);
+    checkEmail(email);
+    checkPass(1, password);
+    checkPass2(password, password2);
+
+    username.addEventListener('keyup', () => {
+        checkUsername(1, username)
+    });
+
+    email.addEventListener('keyup', () => {
+        checkEmail(email)
+    });
+
+    password.addEventListener('keyup', () => {
+        checkPass(1, password)
+    });
+
+    password2.addEventListener('keyup', () => {
+        checkPass2(password2)
     })
 
-    localStorage.setItem("user", JSON.stringify(person));
-}
+    if (Array.from(formInput).every(element => !element.classList.contains('error'))) {
+        person.push({
+            username: username.value,
+            email: email.value,
+            password: password.value
+        })
+    
+        localStorage.setItem("user", JSON.stringify(person));
+        location.href = signupForm.getAttribute("action");
+    }
+})
 
-function checkUsername() {
-    const namePattern = /^[a-zA-Z0-9_\.-]+$/;
+function checkUsername(mode, username) {
+    const search = person.find(user => user.username === username.value);
 
-    if (username.value.match(namePattern)) {
-        success(username);
+    if (username.value === '') {
+        error(username, 'Username cannot be blank');
         return;
     }
-    
-    error(username, 'Username cannot be blank');
+
+    if (username.value.length < 3 || username.value.length > 20) {
+        error(username, 'Username must be between 3 and 20 characters')
+    }
+
+    if (mode === 0) {
+        if (search === undefined) {
+            error(username, 'Incorrect username');
+            return;
+        }
+
+        success(username);
+    }
+
+    if (mode === 1) {
+        const namePattern = /^[a-zA-Z0-9_-]{3,20}$/;
+
+        if (username.value.match(namePattern)) {
+            success(username);
+            return;
+        }
+
+        if (search !== undefined) {
+            error(username, 'Username has already been taken');
+        }
+
+        error(username, 'Username must have letters, numbers, dashes and underscore only.')
+    }
 }
 
-function checkEmail() {
+function checkEmail(email) {
     const mailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if (email.value.match(mailPattern)) {
@@ -58,37 +126,50 @@ function checkEmail() {
         return;
     }
 
-    error(email, 'Invalid e-mail');
+    error(email, 'Invalid e-mail address');
 }
 
-function checkPass() {
-    const passPattern = /^[a-zA-Z0-9!@#$%^&*]{8,}$/;
-
-    if (password.value.match(passPattern)) {
-        success(password);
-        return;
-    }
-
+function checkPass(mode, password) {
     if (password.value === '') {
         error(password, 'Password cannot be blank');
         return;
     }
 
-    if (password.value.length < 8) {
-        error(password, 'Password must have at least 8 characters')
+    if (mode === 0) {
+        const search = person.find(user => user.password === password.value);
+
+        if (search === undefined) {
+            error(password, 'Incorrect password');
+            return;
+        }
+
+        success(password);
+    }
+
+    if (mode === 1) {
+        const passPattern = /^[a-zA-Z0-9!@#$%^&*]{8,}$/;
+
+        if (password.value.match(passPattern)) {
+            success(password);
+            return;
+        }
+    
+        if (password.value.length < 8) {
+            error(password, 'Password must be at least 8 characters long.')
+        }
     }
 }
 
-function checkPass2() {
-    if (password2.value !== '' && password.value !== password2.value) {
-        success(password2);
-        return;
-    }
-
+function checkPass2(password, password2) {
     if (password2.value === '') {
         error(password2, 'Password cannot be blank');
         return;
     } 
+
+    if (password.value === password2.value) {
+        success(password2);
+        return;
+    }
 
     error(password2, 'Passwords does not match');
 }
