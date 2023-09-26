@@ -5,34 +5,35 @@
 	align-items: center;
 }
 
-/* Login & Register Card*/
 .forms-container {
 	background-color: #fff;
 	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
 	width: 400px;
 	max-width: 100%;
+	padding: 30px;
 	margin: auto;
 }
 
-/* Login & Register Select */
-.header {
-	display: flex;
-	justify-content: center;
-	font-size: 24px;
-	padding: 20px 20px;
-	padding-bottom: 0;
+.not-active {
+	display: none;
 }
 
-/* Login & Register Forms */
+/* Login & Register Form */
+
+header {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}
+
 .forms-container form {
-	width: 100%;
-	padding: 30px 40px;
 	box-sizing: border-box;
-	transition: all 0.5s ease;
+	padding-top: 30px;
+	width: 100%;
 }
 
 .form-input {
-	margin-bottom: 10px;
+	margin-top: 10px;
 	padding-bottom: 20px;
 	position: relative;
 }
@@ -46,27 +47,26 @@
 
 .form-input input {
 	box-sizing: border-box;
-	border: 2px solid var(--black);
-	border-radius: 4px;
-	display: block;
-	font-size: 14px;
-	padding: 10px;
-	padding-left: 30px;
-	width: 100%;
-	outline: none;
 	border: none;
 	border-bottom: 1px solid #898989;
+	display: block;
+	font-size: 14px;
+	padding: 10px 30px;
+	width: 100%;
+	outline: none;
+}
+
+.form-input span,
+.form-input i {
+	position: absolute;
+	top: 32px;
 }
 
 .form-input span {
-	position: absolute;
-	top: 34px;
 	left: 10px;
 }
 
 .form-input i {
-	position: absolute;
-	top: 35px;
 	right: 10px;
 	visibility: hidden;
 }
@@ -76,17 +76,6 @@
 	position: absolute;
 	padding-top: 2px;
 	left: 0;
-}
-
-.form-input a {
-	float: right;
-	font-size: 12px;
-	padding-top: 16px;
-	cursor: pointer;
-}
-
-.form-input a:hover {
-	text-decoration: underline;
 }
 
 .form-input.success input {
@@ -108,38 +97,54 @@
 	color: #e74c3c;
 }
 
+.form-link {
+	width: 100%;
+	text-align: center;
+}
+
+.form-link span,
+.form-link a {
+	font-size: 14px;
+}
+
+.form-link a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
 .forms-container button {
 	display: block;
 	width: 100%;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	font-size: 16px;
+	margin: 15px 0;
 }
 
-/* Third-party Divider */
-.divider {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+/* Media Buttons */
+.line {
+	background-color: #898989;
+	position: relative;
+	height: 1px;
+	width: 100%;
+	margin: 38px 0 30px;
 }
 
-.divider hr {
-	width: 40%;
+.line::before {
+	content: 'OR';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 0 10px;
 }
 
-.divider span {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #898989;
-}
-
-/* Third-party Buttons */
-.login-buttons {
+.media-options {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 1.5rem;
 }
 
-.login-buttons a {
+.media-options a {
 	width: 45%;
 	display: flex;
 	justify-content: center;
@@ -150,14 +155,14 @@
 	transition: all 0.2s ease-in;
 }
 
-.login-buttons a:hover {
+.media-options a:hover {
 	border-color: var(--black);
 }
 
-.login-buttons svg {
+.media-options svg {
 	width: 25px;
 }
 
-.login-buttons span {
+.media-options span {
 	font-size: 14px;
 }
