@@ -35,12 +35,13 @@ function addCart(id) {
         return;
     }
 
-    if (person.length > 0) {
+    if (person.length > 0 && person.find(user => user.loggedin === true)) {
         addBasket(id, select.selectedIndex ,select.value);
         return;
     }
     
-    login();
+    const result = confirm("You're not logged in, go to login page?");
+    result ? window.location = `${window.location.origin}/login.html` : "";
 }
 
 function addBasket(id, index, color) {

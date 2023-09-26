@@ -15,12 +15,12 @@ function formatNum(num) {
 }
 
 function login() {
-    if (person.length > 0) {
+    if (person.length > 0 && person.find(user => user.loggedin === true)) {
         const userIcon = document.querySelector(".fa-circle-user");
 
         const result = confirm("You're already logged in, go to cart page?");
         return result ? window.location = `${window.location.origin}/cart.html` : "";
     }
 
-    window.location = `${window.location.origin}/login.html`
+    window.location = `${window.location.origin}/login.html`;
 }

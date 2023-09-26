@@ -32,6 +32,10 @@ loginForm.addEventListener('submit', event => {
     });
 
     if (Array.from(loginInput).every(element => !element.classList.contains('error'))) {
+        const search = person.find(user => user.username === username.value);
+
+        search.loggedin = true;
+        localStorage.setItem("user", JSON.stringify(person));
         location.href = loginForm.getAttribute("action");
     }
 })
@@ -64,11 +68,12 @@ signupForm.addEventListener('submit', event => {
         checkPass2(password2)
     })
 
-    if (Array.from(formInput).every(element => !element.classList.contains('error'))) {
+    if (Array.from(signupInput).every(element => !element.classList.contains('error'))) {
         person.push({
             username: username.value,
             email: email.value,
-            password: password.value
+            password: password.value,
+            loggedin: true
         })
     
         localStorage.setItem("user", JSON.stringify(person));
