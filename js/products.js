@@ -42,13 +42,11 @@ function addCart(id) {
     const select = document.querySelector("select");
 
     if (select.selectedIndex === 0) {
-        alert("Please select a color!");
-        return;
+        return alert("Please select a color!");
     }
 
     if (person.length > 0 && person.find(user => user.loggedin === true)) {
-        addBasket(id, select.selectedIndex ,select.value);
-        return;
+        return addBasket(id, select.selectedIndex ,select.value);
     }
     
     const result = confirm("You're not logged in, go to login page?");
@@ -59,8 +57,7 @@ function addBasket(id, index, color) {
     let search = basket.find(item => item.id === id && item.color.index === index);
 
     if (search !== undefined && search.color.index === index ) {
-        alert("Product is already in cart!");
-        return;
+        return alert("Product is already in cart!");
     }
 
     basket.push({
