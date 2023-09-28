@@ -162,15 +162,13 @@ function validateCoupon() {
     const coupon = coupons.find(coupon => coupon.code === value);
 
     if(coupon === undefined) {
-        alert("Invalid coupon code!");
-        return;
+        return alert("Invalid coupon code!");
     } 
 
     const search = book.find(item => item.code === value);
 
     if (search !== undefined && search.code === value) {
-        alert("You've already used this code!");
-        return;
+        return alert("You've already used this code!");
     }
         
     book.push({
@@ -196,15 +194,13 @@ function checkout() {
     const search = person.find(user => user.loggedin === true);;
 
     if (search === undefined) {
-        login();
-        return;
+        return window.location = `${window.location.origin}/login.html`;
     }
 
     if (confirm("Are you sure you want to proceed?") === true) {
         clearCart();
         clearCoupon();
 
-        window.location = `${window.location.origin}/thanks.html`
-        return;
+        return window.location = `${window.location.origin}/thanks.html`
     }   
 }

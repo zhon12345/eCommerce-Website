@@ -78,8 +78,8 @@ function checkUsername(mode, username) {
     const search = person.find(user => user.username === username.value);
 
     if (username.value === '') {
-        error(username, 'Username cannot be blank');
-        return;
+        return error(username, 'Username cannot be blank');
+        
     }
 
     if (username.value.length < 3 || username.value.length > 20) {
@@ -88,8 +88,7 @@ function checkUsername(mode, username) {
 
     if (mode === 0) {
         if (search === undefined) {
-            error(username, 'Incorrect username');
-            return;
+            return error(username, 'Incorrect username');
         }
 
         success(username);
@@ -99,8 +98,7 @@ function checkUsername(mode, username) {
         const namePattern = /^[a-zA-Z0-9_-]{3,20}$/;
 
         if (username.value.match(namePattern)) {
-            success(username);
-            return;
+            return success(username);
         }
 
         if (search !== undefined) {
@@ -115,13 +113,11 @@ function checkEmail(email) {
     const mailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if (email.value.match(mailPattern)) {
-        success(email);
-        return;
+        return success(email);
     }
 
     if (email.value === '') {
-        error(email, 'E-mail cannot be blank');
-        return;
+        return error(email, 'E-mail cannot be blank');
     }
 
     error(email, 'Invalid e-mail address');
@@ -129,16 +125,14 @@ function checkEmail(email) {
 
 function checkPass(mode, password) {
     if (password.value === '') {
-        error(password, 'Password cannot be blank');
-        return;
+        return error(password, 'Password cannot be blank');
     }
 
     if (mode === 0) {
         const search = person.find(user => user.password === password.value);
 
         if (search === undefined) {
-            error(password, 'Incorrect password');
-            return;
+            return error(password, 'Incorrect password');
         }
 
         success(password);
@@ -148,8 +142,7 @@ function checkPass(mode, password) {
         const passPattern = /^[a-zA-Z0-9!@#$%^&*]{8,}$/;
 
         if (password.value.match(passPattern)) {
-            success(password);
-            return;
+            return success(password);
         }
     
         if (password.value.length < 8) {
@@ -160,13 +153,11 @@ function checkPass(mode, password) {
 
 function checkPass2(password, password2) {
     if (password2.value === '') {
-        error(password2, 'Password cannot be blank');
-        return;
+        return error(password2, 'Password cannot be blank');
     } 
 
     if (password.value === password2.value) {
-        success(password2);
-        return;
+        return success(password2);
     }
 
     error(password2, 'Passwords does not match');
