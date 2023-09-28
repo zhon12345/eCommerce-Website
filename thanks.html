@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
-	<body>
+	<body onload="orderDetails()">
 		<!-- Navigation Bar -->
 		<nav class="navbar">
 			<div class="container">
@@ -51,15 +51,25 @@
 		<section class="thanks-section">
 			<div class="container">
 				<div class="thanks-container">
-					<h1>Thank you for your purchase!</h1>
+					<i class="fa-regular fa-circle-check"></i>
+					<h1>Order Received!</h1>
+					<p>Thank you, your payment has been successful. A receipt has been sent to your inbox.</p>
 
 					<div class="order-details">
-						<h3>Order Status</h3>
-						<p>Order successfully received</p>
+						<div class="col1">
+							<p>ORDER REF</p>
+							<p>ORDER DATE</p>
+						</div>
 
-						<h3>Tracking Information</h3>
-						<p></p>
+						<div class="col2">
+							<p class="id"></p>
+							<p class="date"></p>
+						</div>
 					</div>
+
+					<a href="./index.html">
+						<button>Back to Homepage</button>
+					</a>
 				</div>
 			</div>
 		</section>
